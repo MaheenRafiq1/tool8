@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Online Tools Collection</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .tool-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    .active-tool {
+      border-left: 4px solid #3b82f6;
+      background-color: #f8fafc;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-gray-100 text-gray-800 min-h-screen">
+
+  <header class="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-8 text-center">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        <i class="fas fa-tools mr-3"></i> Free Online Tools
+      </h1>
+      <p class="text-xl text-blue-100 max-w-2xl mx-auto">
+        All-in-one toolkit for your daily digital needs
+      </p>
+    </div>
+  </header>
+
+  <div class="container mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
+    <!-- Tools Navigation -->
+    <aside class="lg:w-1/4 bg-white rounded-xl shadow-md p-6 h-fit">
+      <div class="relative mb-6">
+        <input type="text" placeholder="Search tools..." class="w-full p-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+        <i class="fas fa-search absolute left-3 top-3.5 text-gray-400"></i>
+      </div>
+      
+      <h3 class="font-semibold text-lg mb-3">Categories</h3>
+      <ul class="space-y-2 mb-6">
+        <li><a href="#" class="flex items-center text-blue-600"><i class="fas fa-image mr-2"></i> Image Tools</a></li>
+        <li><a href="#" class="flex items-center text-gray-700"><i class="fas fa-file-pdf mr-2"></i> PDF Tools</a></li>
+        <li><a href="#" class="flex items-center text-gray-700"><i class="fas fa-video mr-2"></i> Video Tools</a></li>
+        <li><a href="#" class="flex items-center text-gray-700"><i class="fas fa-file-alt mr-2"></i> Document Tools</a></li>
+      </ul>
+      
+      <h3 class="font-semibold text-lg mb-3">Popular Tools</h3>
+      <ul class="space-y-2">
+        <li><a href="#image-compressor" class="flex items-center p-2 rounded hover:bg-blue-50 active-tool"><i class="fas fa-compress mr-2 text-blue-500"></i> Image Compressor</a></li>
+        <li><a href="#pdf-to-word" class="flex items-center p-2 rounded hover:bg-blue-50"><i class="fas fa-file-word mr-2 text-blue-500"></i> PDF to Word</a></li>
+        <li><a href="#video-downloader" class="flex items-center p-2 rounded hover:bg-blue-50"><i class="fas fa-download mr-2 text-blue-500"></i> Video Downloader</a></li>
+        <li><a href="#qr-generator" class="flex items-center p-2 rounded hover:bg-blue-50"><i class="fas fa-qrcode mr-2 text-blue-500"></i> QR Generator</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Tools Area -->
+    <main class="lg:w-3/4">
+      <!-- Image Compressor Tool -->
+      <section id="image-compressor" class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+        <div class="bg-blue-600 text-white p-6">
+          <h2 class="text-2xl font-bold flex items-center">
+            <i class="fas fa-compress mr-3"></i> Image Compressor
+          </h2>
+          <p class="text-blue-100">Reduce image file size without losing quality</p>
+        </div>
+        
+        <div class="p-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Input Section -->
+          <div>
+            <div class="border-2 border-dashed border-blue-400 rounded-lg p-8 text-center cursor-pointer hover:bg-blue-50 transition-colors mb-4">
+              <i class="fas fa-cloud-upload-alt text-4xl text-blue-500 mb-3"></i>
+              <p class="text-gray-600">Drag & drop your image here or click to browse</p>
+              <p class="text-sm text-gray-500 mt-2">Supports: JPG, PNG, WEBP (Max: 10MB)</p>
+              <input type="file" accept="image/*" class="hidden">
+            </div>
+            
+            <div class="mb-4">
+              <label class="block text-gray-700 mb-2">Compression Level</label>
+              <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                <option>Low (Best Quality)</option>
+                <option selected>Medium (Recommended)</option>
+                <option>High (Smallest Size)</option>
+              </select>
+            </div>
+            
+            <div class="flex justify-between">
+              <button class="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-300">
+                <i class="fas fa-redo mr-2"></i> Reset
+              </button>
+              <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+                <i class="fas fa-compress mr-2"></i> Compress
+              </button>
+            </div>
+          </div>
+          
+          <!-- Output Section -->
+          <div>
+            <div class="border border-gray-200 rounded-lg p-4 mb-4">
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Original Image</span>
+                <span class="text-sm text-gray-500">0 KB</span>
+              </div>
+              <div class="bg-gray-100 rounded-lg h-40 flex items-center justify-center">
+                <p class="text-gray-500">No image selected</p>
+              </div>
+            </div>
+            
+            <div class="border border-gray-200 rounded-lg p-4 mb-4">
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Compressed Image</span>
+                <span class="text-sm text-gray-500">0 KB (0% saved)</span>
+              </div>
+              <div class="bg-gray-100 rounded-lg h-40 flex items-center justify-center">
+                <p class="text-gray-500">Compressed image will appear here</p>
+              </div>
+            </div>
+            
+            <button class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 disabled:bg-gray-400" disabled>
+              <i class="fas fa-download mr-2"></i> Download Compressed Image
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PDF to Word Tool -->
+      <section id="pdf-to-word" class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+        <div class="bg-blue-600 text-white p-6">
+          <h2 class="text-2xl font-bold flex items-center">
+            <i class="fas fa-file-word mr-3"></i> PDF to Word Converter
+          </h2>
+          <p class="text-blue-100">Convert PDF documents to editable Word files</p>
+        </div>
+        
+        <div class="p-6">
+          <div class="border-2 border-dashed border-blue-400 rounded-lg p-8 text-center cursor-pointer hover:bg-blue-50 transition-colors mb-6">
+            <i class="fas fa-file-pdf text-4xl text-blue-500 mb-3"></i>
+            <p class="text-gray-600">Drag & drop your PDF here or click to browse</p>
+            <p class="text-sm text-gray-500 mt-2">Supports: PDF files (Max: 20MB)</p>
+            <input type="file" accept=".pdf" class="hidden">
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label class="block text-gray-700 mb-2">Output Format</label>
+              <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                <option>DOCX (Microsoft Word)</option>
+                <option>ODT (OpenDocument)</option>
+                <option>RTF (Rich Text)</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="block text-gray-700 mb-2">Conversion Quality</label>
+              <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                <option>Preserve Layout (Recommended)</option>
+                <option>Text Only (Simple Extraction)</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="flex justify-between">
+            <button class="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-300">
+              <i class="fas fa-redo mr-2"></i> Reset
+            </button>
+            <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+              <i class="fas fa-exchange-alt mr-2"></i> Convert to Word
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="bg-blue-600 text-white py-8 mt-12">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-2xl font-bold mb-4">Free Online Tools Collection</h3>
+      <p class="mb-6 max-w-2xl mx-auto">20+ essential tools for your daily digital tasks - completely free!</p>
+      <div class="flex justify-center space-x-6 mb-6">
+        <a href="#" class="text-white hover:text-blue-200 text-2xl"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-white hover:text-blue-200 text-2xl"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="text-white hover:text-blue-200 text-2xl"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="flex justify-center space-x-6 text-sm">
+        <a href="#" class="text-blue-200 hover:text-white">Privacy Policy</a>
+        <a href="#" class="text-blue-200 hover:text-white">Terms of Service</a>
+        <a href="#" class="text-blue-200 hover:text-white">Contact Us</a>
+      </div>
+      <p class="text-blue-200 mt-6">&copy; 2023 Free Online Tools. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple JavaScript for tool navigation
+    document.addEventListener('DOMContentLoaded', function() {
+      // Update active tool in sidebar
+      const toolLinks = document.querySelectorAll('aside a');
+      toolLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          toolLinks.forEach(l => l.classList.remove('active-tool'));
+          this.classList.add('active-tool');
+        });
+      });
+      
+      // Basic file input handling
+      const fileInputs = document.querySelectorAll('input[type="file"]');
+      fileInputs.forEach(input => {
+        const dropZone = input.previousElementSibling;
+        dropZone.addEventListener('click', () => input.click());
+        
+        input.addEventListener('change', function() {
+          if (this.files.length) {
+            const fileName = this.files[0].name;
+            dropZone.querySelector('p:nth-of-type(1)').textContent = fileName;
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
